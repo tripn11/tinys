@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Rubik:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="icon" href="./media/images/logo.png">
+    <title>Thinees</title>
+</head>
+<body>
+    <header>
+        <div id="welcome-video-container">
+            <video id="welcome-video" src="./media/videos/food-no audio-compressed4.mp4"  muted autoplay loop></video>
+            <div id="overlay"></div>
+        </div>
+
+        <img id="header-logo" src="./media/images/logo.png" alt="The company logo">
+
+        <nav>
+            <a href="#">How it Works </a>
+            <a href="#">Meals </a>
+            <a href="#">Subscribe </a>
+        </nav> 
+        
+        <div id="header-content">
+            <p>A healthy meal delivered to your door</p>
+            <p>Every &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Single &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Day</p>
+            <div id="header-content-buttons">
+                <button>Start Eating</button>
+                <button>Learn more</button>
+            </div>
+        </div>
+
+    </header>
+
+    <section id="how-it-works">
+        <h2>How it works</h2>
+
+        <p id="how-it-works_description">With the hussle and bussle of the day, there is barely time for cooking.
+            Let's treat you to sumptuous daily meals in just 3 steps
+        </p>
+
+        <div class="steps-container">
+            <div>
+                <p class="steps">1</p>
+                <h3>What do you like?</h3>
+                <p>Don't get stressed thinking of what to eat each day.
+                    Select your favorite meals <span><a href="">here</a></span>
+                </p>
+            </div>
+            <picture>
+                <source media="(max-width: 480px)" srcset="./media/images/iphone.png">
+                <source media="(max-width: 768px)" srcset="./media/images/tablet.png">
+                <img src="./media/images/laptop.png" alt="subscription on a laptop or mobile phone">
+            </picture>
+        </div>
+        
+        
+
+        <div class="steps-container">
+            <div>
+                <p class="steps">2</p>
+                <h3>Foodie or not</h3>
+                <p>subscribe to your desired meal plan size</p>
+            </div>
+            <picture>
+                <source media="(max-width: 480px)" srcset="./media/images/iphone.png">
+                <source media="(max-width: 768px)" srcset="./media/images/tablet.png">
+                <img src="./media/images/laptop.png" alt="subscription on a laptop or mobile phone">
+            </picture>
+        </div>
+       
+        <div class="steps-container">
+            <div>
+            <p class="steps">3</p>
+            <h3>Choose convinient Time and Place</h3>
+            <p>Thinees kitchen will prepare your meal and deliver on time to your preferred location</p>
+            </div>
+            <picture>
+                <source media="(max-width: 480px)" srcset="./media/images/iphone.png">
+                <source media="(max-width: 768px)" srcset="./media/images/tablet.png">
+                <img src="./media/images/laptop.png" alt="subscription on a laptop or mobile phone">
+            </picture>
+        </div>           
+    </section>
+
+    <section id="meals">
+        <h2>Your Favorite Meals</h2>
+        <div id="gallery">
+            <img src="./media/images/afang soup-min.jpg"  alt="afang soup">
+            <img src="./media/images/ekpang-min.jpg" alt="ekpang">
+            <img src="./media/images/fried plantain-min.jpg" alt="fried plantain">
+            <img src="./media/images/fried rice and chicken-min.jpg" alt="fried rice and chicken">
+            <img src="./media/images/king ekpang-min.jpg" alt="ekpang kwukwo">
+            <img src="./media/images/plantain porridge-min.jpg" alt="plantain porridge">
+            <img src="./media/images/protein soup-min.jpg" alt="protein soup">
+            <img src="./media/images/rice and meat sauce-min.jpg" alt="rice">
+            <img src="./media/images/salad-min.jpg" alt="salad">
+            <img src="./media/images/sauced meat-min.jpg" alt="sauced meat">
+            <img src="./media/images/small chops-min.jpg" alt="small chops">
+            <img src="./media/images/yam poridge-min.jpg" alt="yam porridge">
+        </div>
+    </section>
+
+    <section id="trust-the-chef">
+        <h2>Trust the Chef</h2>
+        <video controls  src="./media/videos/her video- cut- compressed2.mp4"></video>
+    </section>
+
+    <section id="order">
+        <h2>Get your first Meal</h2>
+        <form action="">
+            <div class="form-element">
+                <label for="name">Name:</label>
+                <input type="text" name="name" required>
+            </div>
+            <div class="form-element">
+                <label for="location">Location:</label>
+                <input type="text" name="location" required>
+            </div>
+            <div class="form-element">
+                <label for="time">Preferred Time</label>
+                <input type="time">
+            </div>
+            <button>Pay amount Now</button>
+        </form>
+    </section>
+
+    <footer>
+        <div id="footer-logo">
+            <div>
+                <img src="./media/images/logo.png" alt="company logo">
+                <span>Thinees Kitchen</span>
+            </div>
+            <a href="" ><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href=""><ion-icon name="logo-whatsapp"></ion-icon></a>
+            <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+            <p></p>
+        </div>
+        
+        <div id="footer-contact">
+            <p>Contact us</p>
+            <p>1 Nwaniba Road, Uyo, Akwa Ibom</p>
+            <p>noblenwala11@gmail.com</p>
+            <p>+2349038031775</p>
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

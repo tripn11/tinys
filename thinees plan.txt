@@ -1,0 +1,53 @@
+Thinees App		How it works	Meals	subscribe (sticky nav bar)
+(header)
+logo   (video background)
+	A healthy meal delivered to your door,
+	every single day.
+	[start eating well] [learn more]
+------------------------------------------------------------------------------------------------
+How it works
+	With the hustle and bussle of the day, there is barely time for cooking. Let's treat you to sumptuous daily meals in just 3 steps
+	
+	1
+	What do you like? 
+	don't waste time thinking of what to eat.  	  [phone image selecting]
+	Select your favourite meals __here__
+	
+	2
+	[phone image selecting]					foodie or not?
+								subscribe to your desired plan for food size  
+
+	3 choose convinient time and place
+	Thinees kitchen will prepare your meal			[phone image selecting]	 
+	and deliver to selected location and at
+	specified time.
+----------------------------------------------------------------------------------------------------------------
+Meals
+	flex panels with meals | will expand up with the click | with select button
+	list of selected meals
+----------------------------------------------------------------------------------------------------------------
+Trust the chef
+	the video
+----------------------------------------------------------------------------------------------------------------
+subscribe
+	10000 | 20000
+----------------------------------------------------------------------------------------------------------------
+get your first meal
+	form 
+	name:
+	location(use api) if possible
+	preferred time
+	pay (amount) now
+----------------------------------------------------------------------------------------------------------------
+(footer) 
+logo										contact us
+social media logos								address
+										        email
+										    phone number
+		
+	
+	--------------------------------------------------------------------------------------
+	=-------------------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------
+	ISSUES
+	1. The body scrolls above the fixed nav bar even after using z-index
