@@ -22,17 +22,17 @@
         <img id="header-logo" src="./media/images/logo.png" alt="The company logo">
 
         <nav>
-            <a href="#">How it Works </a>
-            <a href="#">Meals </a>
-            <a href="#">Subscribe </a>
+            <a class="scroll" href="#how-it-works">How it Works </a>
+            <a class="scroll" href="#meals">Meals </a>
+            <a class="scroll" href="#order">Subscribe </a>
         </nav> 
         
         <div id="header-content">
             <p>A healthy meal delivered to your door</p>
             <p>Every &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Single &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Day</p>
             <div id="header-content-buttons">
-                <button>Start Eating</button>
-                <button>Learn more</button>
+                <a class="scroll" href="#meals"><button>Start Eating</button></a>
+                <a class="scroll" href="#how-it-works"><button>Learn more</button></a>
             </div>
         </div>
 
@@ -42,7 +42,7 @@
         <h2>How it works</h2>
 
         <p id="how-it-works_description">With the hussle and bussle of the day, there is barely time for cooking.
-            Let's treat you to sumptuous daily meals in just 3 steps
+            Let's treat you to sumptuous daily meals in just 2 simple steps
         </p>
 
         <div class="steps-container">
@@ -50,66 +50,279 @@
                 <p class="steps">1</p>
                 <h3>What do you like?</h3>
                 <p>Don't get stressed thinking of what to eat each day.
-                    Select your favorite meals <span><a href="">here</a></span>
+                    Select your favorite meals <span><a class="scroll" href="#meals">here</a></span>
                 </p>
             </div>
             <picture>
                 <source media="(max-width: 480px)" srcset="./media/images/iphone.png">
                 <source media="(max-width: 768px)" srcset="./media/images/tablet.png">
-                <img src="./media/images/laptop.png" alt="subscription on a laptop or mobile phone">
-            </picture>
-        </div>
-        
-        
-
-        <div class="steps-container">
-            <div>
-                <p class="steps">2</p>
-                <h3>Foodie or not</h3>
-                <p>subscribe to your desired meal plan size</p>
-            </div>
-            <picture>
-                <source media="(max-width: 480px)" srcset="./media/images/iphone.png">
-                <source media="(max-width: 768px)" srcset="./media/images/tablet.png">
-                <img src="./media/images/laptop.png" alt="subscription on a laptop or mobile phone">
+                <img src="./media/images/laptop 1.png" alt="subscription on a laptop or mobile phone">
             </picture>
         </div>
        
         <div class="steps-container">
             <div>
-            <p class="steps">3</p>
-            <h3>Choose convinient Time and Place</h3>
-            <p>Thinees kitchen will prepare your meal and deliver on time to your preferred location</p>
+                <p class="steps">2</p>
+                <h3>Choose convinient Time and Place</h3>
+                <p>Foodie or not, Thinees kitchen will prepare your meal and deliver on time to your preferred location</p>
             </div>
             <picture>
                 <source media="(max-width: 480px)" srcset="./media/images/iphone.png">
                 <source media="(max-width: 768px)" srcset="./media/images/tablet.png">
-                <img src="./media/images/laptop.png" alt="subscription on a laptop or mobile phone">
+                <img src="./media/images/laptop 2.png" alt="subscription on a laptop or mobile phone">
             </picture>
         </div>           
     </section>
 
     <section id="meals">
         <h2>Your Favorite Meals</h2>
+        <p>Click on your favourite meals to select them</p>
         <div id="gallery">
-            <img src="./media/images/afang soup-min.jpg"  alt="afang soup">
-            <img src="./media/images/ekpang-min.jpg" alt="ekpang">
-            <img src="./media/images/fried plantain-min.jpg" alt="fried plantain">
-            <img src="./media/images/fried rice and chicken-min.jpg" alt="fried rice and chicken">
-            <img src="./media/images/king ekpang-min.jpg" alt="ekpang kwukwo">
-            <img src="./media/images/plantain porridge-min.jpg" alt="plantain porridge">
-            <img src="./media/images/protein soup-min.jpg" alt="protein soup">
-            <img src="./media/images/rice and meat sauce-min.jpg" alt="rice">
-            <img src="./media/images/salad-min.jpg" alt="salad">
-            <img src="./media/images/sauced meat-min.jpg" alt="sauced meat">
-            <img src="./media/images/small chops-min.jpg" alt="small chops">
-            <img src="./media/images/yam poridge-min.jpg" alt="yam porridge">
+            <div class="flip-box">
+                <div class="meal-card">
+                    <div class ="front-side">
+                        <div>
+                            <img src="./media/images/afang soup-min.jpg"  alt="afang soup">
+                        </div>
+                    </div>
+                    <div class ="back-side">
+                        <div class="back-side-complete">
+                            <img src="./media/images/afang soup-min.jpg"  alt="afang soup">
+                            <div class="back-side-details">
+                                <p>Afang Soup</p>
+                                <p>&#8358; 15000</p>
+                                <button>Select</button>
+                            </div> 
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flip-box">
+                <div class="meal-card">
+                    <div class = "front-side">
+                        <div>
+                            <img src="./media/images/ekpang-min.jpg" alt="ekpang">
+                        </div>  
+                    </div>
+                    <div class = "back-side">
+                        <div class="back-side-complete">
+                            <img src="./media/images/ekpang-min.jpg" alt="ekpang">
+                            <div class="back-side-details">
+                                <p>Ekpang kwukwo</p>
+                                <p>&#8358; 15000</p>
+                                <button>Select</button>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flip-box">
+                <div class="meal-card">
+                    <div class = "front-side">
+                        <div>
+                            <img src="./media/images/fried plantain-min.jpg" alt="fried plantain">
+                        </div>
+                    </div>
+                    <div class = "back-side">
+                        <div class="back-side-complete">
+                            <img src="./media/images/fried plantain-min.jpg" alt="fried plantain">
+                            <div class="back-side-details">
+                                <p>Fried Plantain</p>
+                                <p>&#8358; 8000</p>
+                                <button>Select</button>
+                            </div>
+                        </div>      
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="meal-card">
+                    <div class = "front-side">
+                        <div>
+                            <img src="./media/images/fried rice and chicken-min.jpg" alt="fried rice and chicken">
+                        </div>
+                    </div>
+                    <div class = "back-side">
+                        <div class="back-side-complete">
+                            <img src="./media/images/fried rice and chicken-min.jpg" alt="fried rice and chicken">
+                            <div class="back-side-details">
+                                <p>Fried Rice</p>
+                                <p>&#8358; 20000</p>
+                                <button>Select</button>
+                            </div>
+                        </div>      
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="meal-card">
+                    <div class = "front-side">
+                        <div>
+                            <img src="./media/images/king ekpang-min.jpg" alt="ekpang kwukwo">
+                        </div>
+                    </div>
+                    <div class = "back-side">
+                        <div class="back-side-complete">
+                            <img src="./media/images/king ekpang-min.jpg" alt="ekpang kwukwo">
+                            <div class="back-side-details">
+                                <p>Ekpang</p>
+                                <p>&#8358; 15000</p>
+                                <button>Select</button>
+                            </div>
+                        </div>      
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flip-box">
+                <div class="meal-card">
+                    <div class = "front-side">
+                        <div>
+                            <img src="./media/images/plantain porridge-min.jpg" alt="plantain porridge">
+                        </div>
+                    </div>
+                    <div class = "back-side">
+                        <div class="back-side-complete">
+                            <img src="./media/images/plantain porridge-min.jpg" alt="plantain porridge">
+                            <div class="back-side-details">
+                                <p>Plantain Porridge</p>
+                                <p>&#8358; 5000</p>
+                                <button>Select</button>
+                            </div>
+                        </div>      
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="meal-card">
+                    <div class = "front-side">
+                        <div>
+                            <img src="./media/images/protein soup-min.jpg" alt="protein soup">
+                        </div>
+                    </div>
+                    <div class = "back-side">
+                        <div class="back-side-complete">
+                            <img src="./media/images/protein soup-min.jpg" alt="protein soup">
+                            <div class="back-side-details">
+                                <p>Protein Soup</p>
+                                <p>&#8358; 25000</p>
+                                <button>Select</button>
+                            </div>
+                        </div>      
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="meal-card">
+                    <div class = "front-side">
+                        <div>
+                            <img src="./media/images/rice and meat sauce-min.jpg" alt="rice">
+                        </div>
+                    </div>
+                    <div class = "back-side">
+                        <div class="back-side-complete">
+                            <img src="./media/images/rice and meat sauce-min.jpg" alt="rice">
+                            <div class="back-side-details">
+                                <p>Rice and Meat Sauce</p>
+                                <p>&#8358; 20000</p>
+                                <button>Select</button>
+                            </div>
+                        </div>      
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="meal-card">
+                    <div class = "front-side">
+                        <div>
+                            <img src="./media/images/salad-min.jpg" alt="salad">
+                        </div>
+                    </div>
+                    <div class = "back-side">
+                        <div class="back-side-complete">
+                            <img src="./media/images/salad-min.jpg" alt="salad">
+                            <div class="back-side-details">
+                                <p>Salad</p>
+                                <p>&#8358; 5000</p>
+                                <button>Select</button>
+                            </div>
+                        </div>      
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="meal-card">
+                    <div class = "front-side">
+                        <div>
+                            <img src="./media/images/sauced meat-min.jpg" alt="sauced meat">
+                        </div>
+                    </div>
+                    <div class = "back-side">
+                        <div class="back-side-complete">
+                            <img src="./media/images/sauced meat-min.jpg" alt="sauced meat">
+                            <div class="back-side-details">
+                                <p>Sauced Meat</p>
+                                <p>&#8358; 15000</p>
+                                <button>Select</button>
+                            </div>
+                        </div>      
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="meal-card">
+                    <div class = "front-side">
+                        <div>
+                            <img src="./media/images/small chops-min.jpg" alt="small chops">
+                        </div>
+                    </div>
+                    <div class = "back-side">
+                        <div class="back-side-complete">
+                            <img src="./media/images/small chops-min.jpg" alt="small chops">
+                            <div class="back-side-details">
+                                <p>Small chops</p>
+                                <p>&#8358; 5000</p>
+                                <button>Select</button>
+                            </div>
+                        </div>      
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="meal-card">
+                    <div class = "front-side">
+                        <div>
+                            <img src="./media/images/yam poridge-min.jpg" alt="yam porridge">
+                        </div>
+                    </div>
+                    <div class = "back-side">
+                        <div class="back-side-complete">
+                            <img src="./media/images/yam poridge-min.jpg" alt="yam porridge">
+                            <div class="back-side-details">
+                                <p>Yam Porridge</p>
+                                <p>&#8358; 12000</p>
+                                <button>Select</button>
+                            </div>
+                        </div>      
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="trust-the-chef">
         <h2>Trust the Chef</h2>
-        <video controls  src="./media/videos/her video- cut- compressed2.mp4"></video>
+        <video height="450"  controls  src="./media/videos/her video- cut- compressed2.mp4"></video>
     </section>
 
     <section id="order">
@@ -127,7 +340,7 @@
                 <label for="time">Preferred Time</label>
                 <input type="time">
             </div>
-            <button>Pay amount Now</button>
+            <button>Pay <span></span> Now</button>
         </form>
     </section>
 
@@ -137,10 +350,10 @@
                 <img src="./media/images/logo.png" alt="company logo">
                 <span>Thinees Kitchen</span>
             </div>
-            <a href="" ><ion-icon name="logo-facebook"></ion-icon></a>
-            <a href=""><ion-icon name="logo-whatsapp"></ion-icon></a>
-            <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
-            <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="https://www.facebook.com/noble.emeka" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://wa.me/qr/MROCUOUSALCZF1" target="_blank"><ion-icon name="logo-whatsapp" target="_blank"></ion-icon></a>
+            <a href="https://www.instagram.com/noble.emy" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="https://www.twitter.com/noble_emy" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
             <p></p>
         </div>
         
