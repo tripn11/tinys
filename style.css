@@ -508,7 +508,7 @@ TABLET
 --------------------------------------------------------------------------
 ----------------------------------------------------------------------------*/
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 768px){
    :root {
     font-size: 1.5vw;
    }    
@@ -537,7 +537,7 @@ MOBILE
         font-size: 3vw;
     }
 
-    body,html {
+    body,html { /*must combine body and html else the overflow-x property won't work"*/
         overflow-x: hidden;
         width: 100vw;
     }
