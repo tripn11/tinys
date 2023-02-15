@@ -7,6 +7,7 @@ GENERAL
     --gray:#353935;
     --latoFont:'Lato', sans-serif;
     --rubikFont: 'Rubik', sans-serif;
+    font-size: 1.2vw;
 }; 
 
 * {
@@ -20,6 +21,7 @@ body {
     color: white;
     overflow-x: hidden;
     background-color: black;
+    font-size: 1.1rem;
 }
 
 button {
@@ -39,23 +41,36 @@ button {
     -o-transition: background-color 0.5s, color 0.5s, font-size 0.5s, padding 0.5s;
 }
 
- button:hover {
+button:hover {
     background-color: black;
     color: var(--orange);
     font-size: 1.2rem;
     padding: 2.5%;
 } 
 
+button:disabled {
+    background-color: grey;
+    color: rgba(255, 255, 255, 0.308);
+}
+
+button:disabled:hover {
+    color: rgba(255, 255, 255, 0.308);
+    font-size: 1.1rem;
+    padding: 2%;
+}
+
 h2 {
-    display: inline-block;
-    text-align: center;
-    margin: 3rem 40%;
+    display: block;
+    width: fit-content;
+    margin: 3rem auto;
     padding: 0.3rem 0.3rem;
     border-bottom: solid 0.1rem white;
+    font-size: 2rem;
 }
 
 h3 {
     padding-bottom: 1.5rem;
+    font-size: 1.5rem;
 }
 
 
@@ -99,12 +114,18 @@ header {
     margin: 1rem;
 }
 
+.nav-icon {
+    display: none;
+}
+
 nav {
     position: fixed;
     top: 3rem;
-    left: 55%;
-    font-size: 1.4rem;
+    right: 5%;
+    font-size: 1.8vw;
     z-index: 1;
+    width: 40vw;
+    text-align: center;
     transition: 0.5s;
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
@@ -115,7 +136,7 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    margin-right: 5rem;
+    margin-right: 10%;
     padding: 1rem 0;
     border-bottom: solid 1px transparent ;
     transition: color 0.5s, border-bottom 0.5s;
@@ -134,15 +155,19 @@ nav a:active {
 nav#scrolled {
     top: 0;
     left: 0;
-    padding: 0.5rem 0 0.5rem 55%;
+    text-align: right;
+    padding: 0.6rem 0 0.6rem 0;
     width: 100vw;
+    font-size: 1.5vw;
     background-color: gray ;
     opacity: 0.5;
+    z-index: 2;
 }
 
 nav#scrolled a {
     z-index: 10;
     padding: 0.5rem 0;
+    margin-right: 5vw;
 }
 
 #header-content {
@@ -163,17 +188,23 @@ nav#scrolled a {
     color: #A9A9A9;
 }
 
-#header-content p:nth-child(2){
+#header-content > div > p{
     font-style: italic;
     color: gray;
 }
 
-#header-content-buttons {
-    margin-top: 10rem;
+#emphasis {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
 }
 
-#header-content-buttons button:first-of-type {
-    margin-right: 10rem;
+#header-content-buttons {
+    margin-top: 8rem;
+}
+
+#header-content-buttons > a:first-child{
+    margin-right: 30%;
 }
 
 /*--------------------------------------------------------------------------
@@ -353,6 +384,10 @@ MEALS
     padding: 0.6rem 3rem;
 }
 
+.show-meals {
+    display: none;
+}
+
 /*--------------------------------------------------------------------------
 Trust the Chef
 ----------------------------------------------------------------------------*/
@@ -403,12 +438,12 @@ footer {
 #footer-logo{
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-    padding: 2rem 2rem;
+    padding: 1rem 2rem;
 } 
 
 #footer-logo div{
     grid-column: 1/6;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 #footer-logo div > img {
@@ -450,15 +485,320 @@ ion-icon[name="logo-twitter"]:hover {
 }
 
 #footer-contact{
-    margin: 1rem auto;
+    margin: 0 auto;
+    font-weight: 100;
+    font-size: 1rem;
 }
 
-#footer-contact > * {
-    padding-bottom: 1rem;
-}
 
 #footer-contact > *:first-child {
     display: inline-block;
     border-bottom: 0.2rem solid grey;
     padding: 0 0.3rem 0.3rem;
+}
+
+
+/*--------------------------------------------------------------------------
+----------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+TABLET
+
+----------------------------------------------------------------------------
+--------------------------------------------------------------------------
+----------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 600px){
+   :root {
+    font-size: 1.5vw;
+   }    
+} 
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------------------
+----------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+MOBILE
+
+----------------------------------------------------------------------------
+--------------------------------------------------------------------------
+----------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 480px){
+    :root {
+        font-size: 3vw;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin: 2rem auto;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    /*--------------------------------------------------------------------------
+    Header
+    ----------------------------------------------------------------------------*/
+    #header-logo{
+        width: 15%;
+    }
+
+    .nav-icon {
+        display: block;
+        position: fixed;
+        top: 4vw;
+        right: 3vw;
+        z-index: 3;
+}
+
+    .nav-icon:nth-of-type(3) {
+        visibility: hidden;
+    }
+
+    .nav-icon ion-icon {
+        font-size: 8vw;
+        color: white;
+    }
+
+    nav {
+        background-color: grey;
+        opacity: 0.9;
+        height: 40vw;
+        top: 1.5vw;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        padding-top:3rem;
+        border: 1px solid transparent;
+        border-radius: 5%;
+        -webkit-border-radius: 5%;
+        -moz-border-radius: 5%;
+        -ms-border-radius: 5%;
+        -o-border-radius: 5%;
+        transform:translateX(100%) ;
+        -webkit-transform:translateX(100%) ;
+        -moz-transform:translateX(100%) ;
+        -ms-transform:translateX(100%) ;
+        -o-transform:translateX(100%) ;
+        visibility: hidden;
+}
+
+    nav a{
+        display: block;
+        font-size: 3vw;
+        width: 100%;
+        margin-bottom: 1vw;
+}
+
+    nav a:hover,
+    nav a:active{
+        background-color: #353935;
+        border-bottom: 1px solid transparent;
+    }
+
+    nav#scrolled {
+        top: 1.5vw;
+        left: auto;
+        right: 0;
+        text-align: center;
+        padding:3rem 0 0 0;
+        width: auto;
+        font-size: 1.5vw;
+        background-color: grey ;
+        opacity: 0.9;
+        z-index: 2;
+        height: 40vw;
+        width: 40vw;
+        display: flex;
+        flex-direction: column;       
+    }
+    
+    nav#scrolled a {
+        padding: 1rem 0;
+    }
+
+    #header-content p{
+        font-size: 2rem;
+        text-align: center;
+        padding-top: 1rem;
+    }
+
+    #emphasis {
+        text-align: center;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    #emphasis p{
+        font-size: 1.5rem;
+    }
+
+    #header-content-buttons {
+        display: flex;
+        /* font-size: 1rem; */
+    }
+
+    #header-content-buttons {
+        margin-top: 15vh;
+    }
+
+    #header-content-buttons button{
+        font-size: 0.7rem;
+        padding: 0.5rem 2rem;
+    }
+
+    #header-content-buttons > a:first-child {
+        margin-right: 10%;
+    }
+
+
+    /*--------------------------------------------------------------------------
+    How-it-works
+    ----------------------------------------------------------------------------*/
+    .steps {
+        margin-bottom: 1rem;
+    }
+
+
+
+
+    /*--------------------------------------------------------------------------
+    Meals
+    ----------------------------------------------------------------------------*/
+    #gallery {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+    }
+
+    #meals > p {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .flip-box {
+        height: 20rem;
+        margin-bottom: 3rem;
+        display: none;
+    }
+
+    .flip-box:first-child,
+    .flip-box:nth-child(2),
+    .flip-box:nth-child(3) {
+        display: block;
+    }
+
+    .back-side-details p{
+        padding-bottom: 5rem;
+    }
+
+    .back-side-details button {
+        font-size: 0.8rem;
+    }
+
+    .show-meals {
+        display: block;
+        color: grey;
+        background-color: rgba(128, 128, 128, 0.1);
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    #hide {
+        display: none;
+        cursor: pointer;
+    } 
+    
+    @keyframes bounce {
+        0% { transform:translateY(0%); -webkit-transform:translateY(0%); -moz-transform:translateY(0%); -ms-transform:translateY(0%); -o-transform:translateY(0%); }
+        50% { transform:translateY(20%); -webkit-transform:translateY(20%); -moz-transform:translateY(20%); -ms-transform:translateY(20%); -o-transform:translateY(20%); }
+        100% { transform: translateY(-20%); -webkit-transform: translateY(-20%); -moz-transform: translateY(-20%); -ms-transform: translateY(-20%); -o-transform: translateY(-20%); }
+    }
+
+    #show {
+        animation-name: bounce;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        cursor: pointer;
+    }
+
+
+    /*--------------------------------------------------------------------------
+    Trust-the-chef
+    ----------------------------------------------------------------------------*/
+    video {
+        height: 20rem;
+    }
+
+
+    /*--------------------------------------------------------------------------
+    Trust-the-chef
+    ----------------------------------------------------------------------------*/
+    #order > form {
+        width: 85%;
+    }
+
+    .form-element {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        width: 100%;
+    }
+
+    .form-element > label {
+        margin-right: 2rem;
+        font-size: 0.8rem;
+    }
+
+    form > button {
+        font-size: 1rem;
+    }
+
+    button:disabled:hover {
+        font-size: 1rem;
+        padding: 0.5rem 0.5rem;
+    }
+
+
+
+
+    /*--------------------------------------------------------------------------
+    Footer
+    ----------------------------------------------------------------------------*/
+    #footer-logo {
+        padding: 1rem 0.5rem;
+    }
+    #footer-logo div > img {
+        width: 25%;
+    }
+
+    #footer-logo span {
+        font-size: 1rem;
+        padding-left: 0.5rem;
+    }
+
+    #footer-contact {
+        margin: 1rem auto 0;
+    }
+
+    #footer-contact > *:first-child {
+        font-size: 0.8rem;
+    }
+
+    #footer-contact > * {
+        font-size: 0.8rem;
+    }
 }

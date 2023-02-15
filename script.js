@@ -52,9 +52,17 @@ const flip = (e) => {
 }
 
 const displayPrice = () => {
-    const price = amount.length > 0 ? amount.reduce((total,item)=>total + item) : 0;
     const displayPriceButton = document.querySelector('button span');
-    displayPriceButton.innerHTML = `&#8358;${price}`;
+    const button = document.querySelector('form > button');
+    const price = amount.length > 0 ? amount.reduce((total,item)=>total + item) : 0;
+    // displayPriceButton.innerHTML = price > 0 ? `&#8358;${price}` : '';
+    if (price > 0) {
+        displayPriceButton.innerHTML = `&#8358;${price}`;
+        button.removeAttribute('disabled');
+    } else {
+        displayPriceButton.innerHTML = '';
+        button.setAttribute('disabled','');
+    }
 }
 
 const select = (element) => {
@@ -132,6 +140,68 @@ const smoothScrolling = () => {
     }) 
 }
 
+const showNavMobile = (e) => {
+    const iconType = e.target.getAttribute('name');
+    const nav = document.querySelector('nav');
+
+    if(iconType === 'menu-outline') {
+        e.target.parentElement.style.visibility = 'hidden';
+        setTimeout(()=>{e.target.parentElement.nextElementSibling.style.visibility = 'visible';},300);
+        nav.style.transform ='translateX(10%)';
+        nav.style.visibility='visible'; //this is necessary for the mobile because the nav keeps appearing then translating to 100% when loaded and when scrolled to important point
+    } else {
+        e.target.parentElement.style.visibility = 'hidden';
+        setTimeout(()=>{e.target.parentElement.previousElementSibling.style.visibility = 'visible';},300);
+        nav.style.transform ='translateX(100%)';
+        nav.style.visibility='hidden';
+    }
+}
+
+//for mobile nav-icon 
+const showNav = () => {
+    const navIcons = document.querySelectorAll(".nav-icon");
+    navIcons.forEach((icon)=> {icon.addEventListener('click',showNavMobile)})
+}
+
+
+//for controlling the showing of complete meals in mobile
+
+const controlShowMeals = (e) => {
+    const action = e.target.getAttribute('id');
+    const meals = document.querySelectorAll('.flip-box');
+    const show = document.getElementById('show');
+    const hide = document.getElementById('hide');
+    const anchor = document.querySelector('.flip-box:nth-of-type(3)');
+    if(action === 'show') {
+        show.style.display='none';
+        hide.style.display='block';
+        meals.forEach((meal)=>{
+            meal.style.display='block';
+        })
+    }else {
+        show.style.display='block';
+        hide.style.display='none';
+
+        for(let i=3; i<meals.length; i++) {
+            meals[i].style.display='none';
+        }
+
+        scroll({
+            top:anchor.offsetTop + anchor.parentElement.offsetTop + anchor.parentElement.parentElement.offsetTop - window.innerHeight/2
+        })
+    }
+}
+
+const showMeals = () => {
+    const control = document.querySelectorAll('.show-meals');
+    control.forEach((item) => {
+        item.addEventListener('click', controlShowMeals);
+    }) 
+}
+
+
+showMeals();
+showNav();
 smoothScrolling();
 getMeals();
 window.addEventListener("scroll", animate)

@@ -21,6 +21,9 @@
 
         <img id="header-logo" src="./media/images/logo.png" alt="The company logo">
 
+        <div class="nav-icon"><ion-icon name="menu-outline"></ion-icon></div>
+        <div class="nav-icon"><ion-icon name="close-outline"></ion-icon></div>
+
         <nav>
             <a class="scroll" href="#how-it-works">How it Works </a>
             <a class="scroll" href="#meals">Meals </a>
@@ -29,7 +32,11 @@
         
         <div id="header-content">
             <p>A healthy meal delivered to your door</p>
-            <p>Every &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Single &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Day</p>
+            <div id="emphasis">
+                <p>Every</p>
+                <p>Single</p>
+                <p>Day</p>
+            </div>
             <div id="header-content-buttons">
                 <a class="scroll" href="#meals"><button>Start Eating</button></a>
                 <a class="scroll" href="#how-it-works"><button>Learn more</button></a>
@@ -137,6 +144,8 @@
                     </div>
                 </div>
             </div>
+
+            <div id="show" class="show-meals">Show more Meals <span>&#8595;</span></div>
 
             <div class="flip-box">
                 <div class="meal-card">
@@ -317,12 +326,13 @@
                     </div>
                 </div>
             </div>
+            <div id="hide" class="show-meals">Hide meals</div>
         </div>
     </section>
 
     <section id="trust-the-chef">
         <h2>Trust the Chef</h2>
-        <video height="450"  controls  src="./media/videos/her video- cut- compressed2.mp4"></video>
+        <video height="450"  controls controlsList="nodownload" src="./media/videos/her video- cut- compressed2.mp4"></video>
     </section>
 
     <section id="order">
@@ -340,7 +350,7 @@
                 <label for="time">Preferred Time</label>
                 <input type="time">
             </div>
-            <button>Pay <span></span> Now</button>
+            <button disabled>Pay <span></span> Now</button>
         </form>
     </section>
 
