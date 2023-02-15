@@ -537,6 +537,10 @@ MOBILE
         font-size: 3vw;
     }
 
+    body {
+        overflow-x: hidden;
+    }
+
     h2 {
         font-size: 1.5rem;
         margin: 2rem auto;
@@ -595,14 +599,14 @@ MOBILE
         -ms-transform:translateX(100%) ;
         -o-transform:translateX(100%) ;
         visibility: hidden;
-}
+    }
 
     nav a{
         display: block;
         font-size: 3vw;
         width: 100%;
         margin-bottom: 1vw;
-}
+    }
 
     nav a:hover,
     nav a:active{
