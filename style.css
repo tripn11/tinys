@@ -539,6 +539,7 @@ MOBILE
 
     body {
         overflow-x: hidden;
+        width: 100vw;
     }
 
     h2 {
@@ -567,7 +568,7 @@ MOBILE
         top: 4vw;
         right: 3vw;
         z-index: 3;
-}
+    }
 
     .nav-icon:nth-of-type(3) {
         visibility: hidden;
