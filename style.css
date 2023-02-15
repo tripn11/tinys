@@ -537,7 +537,7 @@ MOBILE
         font-size: 3vw;
     }
 
-    body {
+    body,html {
         overflow-x: hidden;
         width: 100vw;
     }
