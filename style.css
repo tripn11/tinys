@@ -534,7 +534,7 @@ MOBILE
 
 @media only screen and (max-width: 480px){
     :root {
-        font-size: 3vw;
+        font-size: 4vw;
     }
 
     body,html { /*must combine body and html else the overflow-x property won't work"*/
