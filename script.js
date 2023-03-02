@@ -2,6 +2,13 @@
 
 const amount = [];
 
+const ios = () => {
+    const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    if (isiOS) {
+      document.getElementById('welcome-video').play();
+    }
+}
+
 const navAnime = ()=>{
     const navElement = document.getElementsByTagName("nav")[0];
     if(window.scrollY >= window.innerHeight) {
@@ -200,8 +207,10 @@ const showMeals = () => {
 }
 
 
+
 showMeals();
 showNav();
 smoothScrolling();
 getMeals();
 window.addEventListener("scroll", animate)
+document.addEventListener('DOMContentLoaded',ios);
