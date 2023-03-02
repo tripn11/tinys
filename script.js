@@ -3,10 +3,18 @@
 const amount = [];
 
 const ios = () => {
+    const myVideo = document.getElementById('welcome-video');
     const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-    if (isiOS) {
-      document.getElementById('welcome-video').play();
-    }
+  
+  if (isiOS) {
+    myVideo.setAttribute('playsinline', '');
+    myVideo.addEventListener('canplaythrough', function() {
+      myVideo.play();
+    });
+  } else {
+    myVideo.autoplay = true;
+    myVideo.play();
+  }
 }
 
 const navAnime = ()=>{
