@@ -1,6 +1,14 @@
 //Animating the sticky nav bar
 
 const amount = [];
+const button = document.querySelector('form button');
+
+function payment(e) {
+    //debugger;
+    e.preventDefault();
+    console.log('hi');
+    window.location.href = 'payment.html';
+}
 
 const ios = () => {
     const myVideo = document.getElementById('welcome-video');
@@ -68,7 +76,6 @@ const flip = (e) => {
 
 const displayPrice = () => {
     const displayPriceButton = document.querySelector('button span');
-    const button = document.querySelector('form > button');
     const price = amount.length > 0 ? amount.reduce((total,item)=>total + item) : 0;
     // displayPriceButton.innerHTML = price > 0 ? `&#8358;${price}` : '';
     if (price > 0) {

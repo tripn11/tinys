@@ -22,7 +22,10 @@
             <div id="overlay"></div>
         </div>
 
-        <img id="header-logo" src="./media/images/logo.png" alt="The company logo">
+        <div class="brand">
+            <img id="header-logo" src="./media/images/logo.png" alt="The company logo">
+            <span>Thinees</span>
+        </div>
 
         <div class="nav-icon"><ion-icon name="menu-outline"></ion-icon></div>
         <div class="nav-icon"><ion-icon name="close-outline"></ion-icon></div>
@@ -82,6 +85,14 @@
                 <img src="./media/images/laptop-2.png" alt="subscription on a laptop or mobile phone">
             </picture>
         </div>           
+    </section>
+
+    <section id="trust-the-chef">
+        <h2>Trust the Chef</h2>
+        <!-- <video height="450"  controls controlsList="nodownload" src="./media/videos/her video- cut- compressed2.mp4"></video> -->
+        <video height="450" controls controlsList="nodownload" playsinline>
+            <source src="./media/videos/her video- cut- compressed2.mp4" type="video/mp4">
+        </video>
     </section>
 
     <section id="meals">
@@ -333,17 +344,9 @@
         </div>
     </section>
 
-    <section id="trust-the-chef">
-        <h2>Trust the Chef</h2>
-        <!-- <video height="450"  controls controlsList="nodownload" src="./media/videos/her video- cut- compressed2.mp4"></video> -->
-        <video height="450" controls controlsList="nodownload" playsinline autoplay>
-            <source src="./media/videos/her video- cut- compressed2.mp4" type="video/mp4">
-        </video>
-    </section>
-
     <section id="order">
         <h2>Get your first Meal</h2>
-        <form action="">
+         <form onsubmit = payment(event)> <!--event here is a crucial keyword -->
             <div class="form-element">
                 <label for="name">Name:</label>
                 <input type="text" name="name" required>
