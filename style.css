@@ -585,7 +585,7 @@ MOBILE
         z-index: 3;
     }
 
-    .nav-icon:nth-of-type(3) {
+    #close {
         visibility: hidden;
     }
 
